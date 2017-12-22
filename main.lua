@@ -60,7 +60,7 @@ score = 0
 		defaultFont = gfx.newFont(12)
 
 		-- Audio
-    music1OGG = love.audio.newSource("audio/music1.ogg", "stream")
+    Music1OGG = love.audio.newSource("audio/Music1.ogg", "stream")
 		startOGG = love.audio.newSource("audio/sound1.ogg", "stream")
 		selectOGG = love.audio.newSource("audio/sound1.ogg", "stream")
 		nextOGG = love.audio.newSource("audio/sound1.ogg", "stream")
@@ -142,10 +142,10 @@ score = 0
 		
 		if state == "splash" or state =="gameover" then
 			menu.update(dt)
-      love.audio.stop(music1OGG)
+      love.audio.stop(Music1OGG)
 
   elseif state == "game"  then
-      love.audio.play(music1OGG)
+      love.audio.play(Music1OGG)
 			snake.move(dt)
 			food.update(dt)
 			
@@ -374,7 +374,7 @@ TLfres.endRendering()
 				state = "paused"
 				pauseAutoBg = true
 				love.audio.play(pauseOGG)
-        love.audio.stop(music1OGG)
+        love.audio.stop(Music1OGG)
 				love.mouse.setVisible(true)
 			end
 			
